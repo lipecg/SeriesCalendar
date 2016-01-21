@@ -11,6 +11,12 @@
         <link rel="stylesheet" href="content/css/app.css"/>
     </head>
     <body>
+        <!-- TODO: ADD DECENT MENU -->
+        <div>
+            <a href="/src/#/">Home</a>
+            <a href="/src/#/series">Series</a>
+        </div>
+        
         <!-- Main content that changes based on route -->
         <ng-view></ng-view>
 
@@ -28,5 +34,11 @@
         <!-- Landing module -->
         <script src="app/landing/landing.module.js"></script>
         <script src="app/landing/config.route.js"></script>
+        
+        <!-- Series module -->
+        <script src="app/series/series.module.js"></script>
+        <script src="app/series/config.route.js"></script>
+        <script src="app/series/series.controller.js"></script>
+        
     </body>
 </html>

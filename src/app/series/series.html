@@ -1,0 +1,80 @@
+<button type="button" class="btn btn-link" ng-click="vm.toggleIsAdd()">Toggle Add</button>
+<form ng-submit="vm.addSeries()" ng-show="vm.isAdd">
+    <div class="form-group">
+        <label for="tvdbId">TVDB ID:</label>
+        <input ng-model="vm.newSeries.tvdbId" type="number" class="form-control" id="tvdbId" required>
+    </div>
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input ng-model="vm.newSeries.name" type="text" class="form-control" id="name" required>
+    </div>
+    <div class="form-group">
+        <label for="overview">Overview:</label>
+        <input ng-model="vm.newSeries.overview" type="text" class="form-control" id="overview">
+    </div>
+    <div class="form-group">
+        <label for="status">Status:</label>
+        <input ng-model="vm.newSeries.status" type="text" class="form-control" id="status">
+    </div>
+    <div class="form-group">
+        <label for="genre">Genre:</label>
+        <input ng-model="vm.newSeries.genre" type="text" class="form-control" id="genre">
+    </div>
+    <div class="form-group">
+        <label for="actors">Actors:</label>
+        <input ng-model="vm.newSeries.actors" type="text" class="form-control" id="actors">
+    </div>
+    <div class="form-group">
+        <label for="imdbId">IMDB ID:</label>
+        <input ng-model="vm.newSeries.imdbId" type="text" class="form-control" id="imdbId">
+    </div>
+    <div class="form-group">
+        <label for="language">Language:</label>
+        <input ng-model="vm.newSeries.language" type="text" class="form-control" id="language">
+    </div>
+    <div class="form-group">
+        <label for="airsDayOfWeek">Airs Day:</label>
+        <input ng-model="vm.newSeries.airsDayOfWeek" type="text" class="form-control" id="airsDayOfWeek">
+    </div>
+    <div class="form-group">
+        <label for="airsTime">Airs Time:</label>
+        <input ng-model="vm.newSeries.airsTime" type="text" class="form-control" id="airsTime">
+    </div>
+    <div class="form-group">
+        <label for="runtime">Runtime:</label>
+        <input ng-model="vm.newSeries.runtime" type="text" class="form-control" id="runtime">
+    </div>
+    <div class="form-group">
+        <label for="network">Network:</label>
+        <input ng-model="vm.newSeries.network" type="text" class="form-control" id="network">
+    </div>
+    <div class="form-group">
+        <label for="contentRating">Content Rating:</label>
+        <input ng-model="vm.newSeries.contentRating" type="text" class="form-control" id="contentRating">
+    </div>
+    <div class="form-group">
+        <label for="banner">Banner:</label>
+        <input ng-model="vm.newSeries.banner" type="text" class="form-control" id="banner">
+    </div>
+    <div class="form-group">
+        <label for="poster">Poster:</label>
+        <input ng-model="vm.newSeries.poster" type="text" class="form-control" id="poster">
+    </div>
+    <div class="form-group">
+        <label for="firstAired">First Aired:</label>
+        <input ng-model="vm.newSeries.firstAired" type="text" class="form-control" id="firstAired">
+    </div>
+    <div class="form-group">
+        <label for="zap2itId">Zap2IT ID:</label>
+        <input ng-model="vm.newSeries.zap2itId" type="text" class="form-control" id="zap2itId">
+    </div>
+    <div class="form-group">
+        <label for="lastUpdated">Last updated:</label>
+        <input ng-model="vm.newSeries.lastUpdated" type="text" class="form-control" id="lastUpdated">
+    </div>
+    <button type="submit" class="btn btn-primary">Add Series</button>
+</form>
+
+<div ng-repeat="series in vm.series">
+    {{ series.tvdbId }} - {{ series.name }} - {{ series.airsDayOfWeek }}
+</div>
